@@ -40,11 +40,12 @@ public class MainActivity extends AppCompatActivity {
         scroller.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
+                
+                int min = 1;
                 int tableValue;
                 if (progress < 1){
-                    tableValue = 1;
-                    scroller.setProgress(tableValue);
+                    tableValue = min;
+                    scroller.setProgress(min);
                 } else {
                     tableValue = progress;
                 }
